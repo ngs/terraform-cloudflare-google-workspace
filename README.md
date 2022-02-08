@@ -1,6 +1,6 @@
-# terraform-cloudflare-gsuite
+# terraform-cloudflare-google-workspace
 
-CloudFlare Terraform module for setup G Suite.
+CloudFlare Terraform module for setup Google Workspace.
 
 ## Usage
 
@@ -9,9 +9,9 @@ resource "cloudflare_zone" "example" {
   zone = "example.com"
 }
 
-module "gsuite" {
+module "google-workspace" {
   zone_id   = cloudflare_zone.example.id
-  source    = "ngs/gsuite/cloudflare"
+  source    = "ngs/google-workspace/cloudflare"
   name      = "@"
   gsv_token = "test"
 }
