@@ -1,2 +1,13 @@
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
+
+# Lock files (but keep test directories' lock files)
 .terraform.lock.hcl
-.terraform
+!test*/.terraform.lock.hcl
