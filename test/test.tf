@@ -1,6 +1,8 @@
 resource "cloudflare_zone" "example" {
-  account_id = "dummy-account-id"
-  zone       = "example.com"
+  account = {
+    id = "dummy-account-id"
+  }
+  name = "example.com"
 }
 
 module "test-google-workspace" {
