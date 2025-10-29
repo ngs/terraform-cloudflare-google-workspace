@@ -1,39 +1,44 @@
-resource "cloudflare_record" "aspmx-l" {
+resource "cloudflare_dns_record" "aspmx-l" {
   zone_id  = var.zone_id
   name     = var.name
-  value    = "aspmx.l.google.com"
+  content  = "aspmx.l.google.com"
   type     = "MX"
   priority = 1
+  ttl      = 3600
 }
 
-resource "cloudflare_record" "alt1-aspmx-l" {
+resource "cloudflare_dns_record" "alt1-aspmx-l" {
   zone_id  = var.zone_id
   name     = var.name
-  value    = "alt1.aspmx.l.google.com"
+  content  = "alt1.aspmx.l.google.com"
   type     = "MX"
   priority = 5
+  ttl      = 3600
 }
 
-resource "cloudflare_record" "alt2-aspmx-l" {
+resource "cloudflare_dns_record" "alt2-aspmx-l" {
   zone_id  = var.zone_id
   name     = var.name
-  value    = "alt2.aspmx.l.google.com"
+  content  = "alt2.aspmx.l.google.com"
   type     = "MX"
   priority = 5
+  ttl      = 3600
 }
 
-resource "cloudflare_record" "aspmx2" {
+resource "cloudflare_dns_record" "aspmx2" {
   zone_id  = var.zone_id
   name     = var.name
-  value    = "aspmx2.googlemail.com"
+  content  = "aspmx2.googlemail.com"
   type     = "MX"
   priority = 10
+  ttl      = 3600
 }
 
-resource "cloudflare_record" "aspmx3" {
+resource "cloudflare_dns_record" "aspmx3" {
   zone_id  = var.zone_id
   name     = var.name
-  value    = "aspmx3.googlemail.com"
+  content  = "aspmx3.googlemail.com"
   type     = "MX"
   priority = 10
+  ttl      = 3600
 }
